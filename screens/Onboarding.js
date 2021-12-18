@@ -1,10 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
+// import { useNavigation } from "@react-navigation/native";
 import Button from "../components/Button";
 import Background from "../assets/images/onboarding/background.png";
 import Icon from "../assets/images/onboarding/icon.png";
 
-const Onboarding = () => {
+const Onboarding = ({navigation}) => {
+    // const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -18,7 +20,9 @@ const Onboarding = () => {
         <Text style={styles.secondary}>
           Get your groceries in as fast as one hour
         </Text>
-        <Button title="Get Started" />
+        <Button title="Get Started" function={() => {
+            navigation.navigate("Login")
+        }} />
       </ImageBackground>
     </View>
   );
@@ -35,6 +39,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "flex-end",
     paddingBottom: 90,
+    paddingHorizontal: 25
   },
   icon: {
     width: 50,
