@@ -1,10 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
+import { useNavigation } from "@react-navigation/core";
 import Svg, { Path } from "react-native-svg";
 import Button from "../components/Button";
 import Background from "../assets/images/onboarding/background.png";
 
-const Onboarding = ({ navigation }) => {
+const Onboarding = () => {
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <ImageBackground

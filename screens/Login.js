@@ -11,10 +11,13 @@ import {
   ScrollView,
 } from "react-native";
 import Svg, { Path } from "react-native-svg";
+import { useNavigation } from "@react-navigation/core";
 import Button from "../components/Button";
 import Background from "../assets/images/login/background.png";
 
 const Login = () => {
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground
