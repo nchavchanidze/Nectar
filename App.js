@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AppLoading from "expo-app-loading";
 import Onboarding from "./screens/Onboarding";
 import Login from "./screens/Login";
+import Signup from "./screens/Signup";
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +29,7 @@ export default function App() {
           }}>
             <Stack.Screen name="Onboarding" component={Onboarding} />
             <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="SignUp" component={Signup} />
           </Stack.Navigator>
         </NavigationContainer>
         {/* <Onboarding /> */}
